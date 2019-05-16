@@ -15,6 +15,9 @@
   transform-origin: 50% 50%;
   animation: jump .5s linear alternate infinite;
 }
+  .blink{
+    animation: lower 10s linear infinite;
+  }
 .row::after {
   content: "";
   clear: both;
@@ -110,8 +113,8 @@ html {
 </head>
 <body>
 
-<div class="header jump">
-  <h1>Creality3D Ender-3 Pro 3D Printer</h1>
+<div class="header">
+  <h1 class="blink">Creality3D Ender-3 Pro 3D Printer</h1>
 </div>
 
 <div class="row">
