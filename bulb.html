@@ -114,7 +114,20 @@ html, body {
   height:100%;
 }
 
- 
+ transform-origin: 50% 50%;
+  animation: jump .5s linear alternate infinite;
+}
+   
+   @keyframes glowing {
+  0% { box-shadow: 0 0 -10px #c4a300; }
+  40% { box-shadow: 0 0 20px #c4a300; }
+  60% { box-shadow: 0 0 20px #c4a300; }
+  100% { box-shadow: 0 0 -10px #c4a300; }
+}
+
+.button-glow {
+  animation: glowing 5000ms infinite;
+}
  </style>
   
   
@@ -124,16 +137,16 @@ html, body {
 </head>
 
 <body>
-  <div id="lamp">
-  <input type="radio" name="switch" value="on" />
-  <input type="radio" name="switch" value="off" checked="checked"/>
-  <label for="switch" class="entypo-lamp"></label>
-  <!-- Remove transform from here if you want small lamp -->
-  <div class="lamp"  style="transform:scale(2,2)">
-    <div class="gonna-give-light"></div>
-  </div>
+ <div class="container">
+  <div class="page-header">
+        <h1>Buttons with glow animation loop</h1>
+      </div>
+      <p>
+        <button type="button" class="btn btn-lg btn-default button-glow">Default</button>
+        <button type="button" class="btn btn-lg btn-primary button-glow">Primary</button>
+        <button type="button" class="btn btn-lg btn-link button-glow">Link (no border or background)</button>
+      </p>
 </div>
-  
   
 </body>
 </html>
